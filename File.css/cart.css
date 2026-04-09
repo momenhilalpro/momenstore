@@ -1,0 +1,66 @@
+.cart{
+  display: inline-block;
+  cursor: pointer;
+  font-size: 30px;
+  position: relative;
+ }
+ .cart-dropdown{
+  position: fixed;
+  top: 120px;
+  right: 50px;
+  background-color: #222;
+  color: white;
+  width: 220px;
+  padding: 15px;
+  border-radius: 6px;
+  display: none;
+  /* مهم */
+  z-index: 999999;  
+ } 
+  #cart-box{
+    direction: ltr;
+ position: fixed;
+ top: 0;
+ right: -110px;
+ background-color: #fbf7f7;
+ padding: 20PX;
+ width: 350px;
+ height: 100%;
+ color: #0b0b0b;
+ display: none;
+
+ }
+ #cart-box.active{
+ right: 0;
+ }
+ 
+ #cart-box ul{
+  padding: 0;
+  list-style: none;
+ }
+  #cart-box li{
+    margin: 5px 0;
+  }
+  السله
+#cart-count {
+  position: absolute;
+background-color: rgb(123, 92, 92);
+color: #f8f8fa;
+font-size: 12px;
+position: 2px 6px;
+border-radius: 50%;
+left:10px ;
+top: -8px;
+padding: 4px 8px;
+}
+.cart-icon{
+  position: fixed;
+  /* top: 20px; */
+  left: 10px;
+  background-color: #f59e0b;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+} 
+
+ 

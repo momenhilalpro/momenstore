@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ar" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>اتصل بنا - متجر مومن هلال</title>
+    <!-- <link rel="stylesheet" href="File.css/css.css"> -->
+    <!-- <link rel="stylesheet" href="File.css/header.css"> -->
+    <!-- <link rel="stylesheet" href="File.css/footer.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="File.css/contact.css">
+
+    <style>
+   
+        
+    </style>
+</head>
+<body>
+<header class="main-header">
+    <div class="header-container container">
+        <div class="logo">
+            <i class="fa-brands fa-amazon-pay"></i>
+            <span class="Momen">Momen</span><span class="Hilal"> Hilal</span>
+        </div>
+        <nav class="navbar">
+            <a href="indecx (2).html">الرئيسية</a>
+            <a href="products.html">المنتجات</a>
+            <a href="about.html">من نحن</a>
+            <a href="contact.html" class="active">تواصل معنا</a>
+            <a href="checkout.html" class="checkout-link"><i class="fa-solid fa-credit-card"></i> الدفع</a>
+        </nav>
+        <div class="header-tools">
+            <button id="themeBtn" class="tool-btn" title="تغيير المظهر"><i class="far fa-moon"></i></button>
+            <div class="cart-wrapper">
+                <button class="tool-btn cart-btn"><i class="fa-solid fa-cart-shopping"></i><span id="cart-count">0</span></button>
+            </div>
+            <div class="user-wrapper">
+                <button class="tool-btn user-btn" id="userBtn"><i class="fa-solid fa-circle-user"></i></button>
+                <div class="user-dropdown" id="userDropdown">
+                    <a href="login.html">تسجيل الدخول</a>
+                    <hr>
+                    <a href="register.html">إنشاء حساب</a>
+                    <hr>
+                    <a href="login.html">تسجيل خروج</a>
+                </div>
+            </div>
+        </div>
+        <div class="menu-wrapper">
+            <button class="tool-btn menu-btn" id="bars"><i class="fa-solid fa-bars"></i></button>
+            <div class="menu-dropdown" id="menuBars">
+                <a href="indecx (2).html">الرئيسية</a>
+                <hr>
+                <a href="products.html">المنتجات</a>
+                <hr>
+                <a href="about.html">من نحن</a>
+                <hr>
+                <a href="contact.html" class="active">تواصل معنا</a>
+                <hr>
+                <a href="checkout.html" class="checkout-link"><i class="fa-solid fa-credit-card"></i> إكمال الطلب</a>
+            </div>
+        </div>
+    </div>
+</header>
+<main>
+    <section class="hero-content ">
+        <img class="hero-content-img" src="momen.ggg/M1.jpg" alt="اتصل بنا">
+        <div class="hero-content container">
+            <h2 class="hero-title">نحن هنا لمساعدتك</h2>
+            <p class="hero-subtitle">إذا كان لديك سؤال أو طلب أو تحتاج مساعدة في الطلب، فريقنا جاهز للإجابة في أي وقت.</p>
+        </div>
+    </section>
+    <section class="page-section">
+        <div class="container">
+            <div class="section-title">اتصل بنا</div>
+            <div class="product-grid">
+                <div class="page-card">
+                    <h4>معلومات التواصل</h4>
+                    <p><strong>الهاتف:</strong> <a href="tel:01096429739">01096429739</a></p>
+                    <p><strong>البريد الإلكتروني:</strong> <a href="mailto:info@momenhilal.com">info@momenhilal.com</a></p>
+                    <p><strong>العنوان:</strong> القاهره - مصر - قنا - نقاده</p>
+                </div>
+                <div class="page-card">
+                    <h4>ساعات العمل</h4>
+                    <p>من 9 صباحًا حتى 9 مساءً طوال أيام الأسبوع.</p>
+                    <p>خدمة سريعة واحترافية للطلبات والاستفسارات.</p>
+                </div>
+                <div class="page-card">
+                    <h4>تابعنا</h4>
+                    <div class="footer-socials">
+                        <a href="#" target="_blank" title="فيس بوك"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" target="_blank" title="انستجرام"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" target="_blank" title="تويتر"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="page-card" style="margin-top: 26px;">
+                <h3>أرسل لنا رسالة</h3>
+                <form id="contactForm">
+                    <input class="filter-input" type="text" id="contactName" placeholder="الاسم الكامل" required>
+                    <input class="filter-input" type="email" id="contactEmail" placeholder="البريد الإلكتروني" required>
+                    <textarea class="filter-input" id="contactMessage" rows="5" placeholder="نص الرسالة" required style="resize: vertical;"></textarea>
+                    <button type="submit" class="cta-btn">إرسال الرسالة</button>
+                </form>
+                <div id="contactToast" class="toast"></div>
+            </div>
+        </div>
+    </section>
+</main>
+<footer class="main-footer">
+    <div class="footer-container container">
+        <div class="footer-box footer-about">
+            <div class="footer-logo logo"><i class="fa-brands fa-amazon-pay"></i><span class="Momen">Momen</span><span class="Hilal"> Hilal</span></div>
+            <p class="footer-desc">متجرك الموثوق للحصول على أفضل المنتجات بأعلى جودة وأنسب الأسعار.</p>
+            <div class="footer-socials">
+                <a href="#" target="_blank" title="فيس بوك"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" target="_blank" title="انستجرام"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://wa.me/01096429739" target="_blank" title="واتساب"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="#" target="_blank" title="تويتر (X)"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+        </div>
+        <div class="footer-box footer-links">
+            <h3 class="footer-title">روابط سريعة</h3>
+            <ul>
+                <li><a href="indecx (2).html"><i class="fa-solid fa-chevron-left"></i> الرئيسية</a></li>
+                <li><a href="products.html"><i class="fa-solid fa-chevron-left"></i> المنتجات</a></li>
+                <li><a href="about.html"><i class="fa-solid fa-chevron-left"></i> من نحن</a></li>
+                <li><a href="contact.html"><i class="fa-solid fa-chevron-left"></i> تواصل معنا</a></li>
+            </ul>
+        </div>
+        <div class="footer-box footer-contact">
+            <h3 class="footer-title">تواصل معنا</h3>
+            <ul>
+                <li><i class="fa-solid fa-location-dot"></i><span>القاهره - مصر - قنا - نقاده</span></li>
+                <li><i class="fa-solid fa-phone"></i><a href="tel:01096429739">01096429739</a></li>
+                <li><i class="fa-solid fa-envelope"></i><a href="mailto:info@momenhilal.com">info@momenhilal.com</a></li>
+                <li><i class="fa-solid fa-clock"></i><span>متاحون من 9 صباحًا إلى 9 مساءً</span></li>
+            </ul>
+        </div>
+        <div class="footer-box footer-payments">
+            <h3 class="footer-title">نقبل وسائل دفع آمنة</h3>
+            <div class="payment-icons">
+                <i class="fa-brands fa-cc-visa" title="فيزا"></i>
+                <i class="fa-brands fa-cc-mastercard" title="ماستركارد"></i>
+                <i class="fa-brands fa-cc-paypal" title="بايبال"></i>
+                <i class="fa-brands fa-fawkes" title="فوري (مثال)"></i>
+                <i class="fa-solid fa-money-bill-1-wave" title="الدفع عند الاستلام"></i>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <div class="container footer-bottom-content">
+            <p>&copy; 2026 جميع الحقوق محفوظة لمتجر <span class="highlight">Momen Hilal</span>.</p>
+            <p class="developer">تم التطوير بواسطة <a href="#" target="_blank">فريقنا</a></p>
+        </div>
+    </div>
+</footer>
+<script src="CART.JS"></script>
+<script src="main.js"></script>
+<script>
+    const form = document.getElementById('contactForm');
+    const toast = document.getElementById('contactToast');
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        toast.innerText = 'تم إرسال رسالتك! سنرد عليك قريبًا.';
+        toast.classList.add('show');
+        setTimeout(() => toast.classList.remove('show'), 2200);
+        form.reset();
+    });
+</script>
+</body>
+</html>

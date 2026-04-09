@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Momen Hilal - Premium E-commerce Store</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="File.css/header.css">
+    <link rel="stylesheet" href="File.css/footer.css">
+    <link rel="stylesheet" href="File.css/main-design.css">
+    <link rel="stylesheet" href="index-style.css">
+</head>
+<body>
+    <!-- ============================================================================== -->
+    <!-- HEADER SECTION -->
+    <!-- ============================================================================== -->
+    <header class="main-header">
+        <div class="header-container container">
+            <div class="logo">
+                <i class="fa-solid fa-shopping-bag"></i>
+                <span class="store-name">Momen <span class="highlight">Hilal</span></span>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search products..." class="search-input">
+                <button class="search-btn">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+
+            <!-- Navigation -->
+            <nav class="navbar">
+                <a href="index.html" class="nav-link active">Home</a>
+                <a href="products.html" class="nav-link">Products</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+
+            <!-- Header Tools -->
+            <div class="header-tools">
+                <button id="themeBtn" class="tool-btn" title="Toggle Theme">
+                    <i class="far fa-moon"></i>
+                </button>
+                <div class="cart-wrapper">
+                    <a href="checkout.html" class="tool-btn cart-btn" title="Shopping Cart">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                        <span id="cart-count" class="badge">0</span>
+                    </a>
+                </div>
+                <div class="user-wrapper">
+                    <button class="tool-btn user-btn" id="userBtn" title="User Menu">
+                        <i class="fa-solid fa-circle-user"></i>
+                    </button>
+                    <div class="user-dropdown" id="userDropdown">
+                        <a href="login.html">Login</a>
+                        <hr>
+                        <a href="register.html">Sign Up</a>
+                        <hr>
+                        <a href="#" id="logoutBtn">Logout</a>
+                    </div>
+                </div>
+                <button class="tool-btn menu-btn" id="mobileMenuBtn">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <nav class="mobile-menu" id="mobileMenu">
+                <a href="index.html" class="mobile-nav-link active">Home</a>
+                <a href="products.html" class="mobile-nav-link">Products</a>
+                <a href="about.html" class="mobile-nav-link">About</a>
+                <a href="contact.html" class="mobile-nav-link">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ============================================================================== -->
+    <!-- HERO SECTION -->
+    <!-- ============================================================================== -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">Premium Quality Products</h1>
+                <p class="hero-subtitle">Discover our exclusive collection of the latest tech and lifestyle products</p>
+                <button class="btn btn-primary btn-lg" onclick="document.getElementById('featured').scrollIntoView({behavior: 'smooth'})">
+                    Shop Now
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+            <div class="hero-image">
+                <div class="hero-placeholder">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                </div>
+            </div>
+        </div>
+        <div class="hero-overlay"></div>
+    </section>
+
+    <!-- ============================================================================== -->
+    <!-- FLASH SALE BANNER -->
+    <!-- ============================================================================== -->
+    <section class="flash-sale-banner">
+        <div class="container">
+            <div class="sale-content">
+                <div class="sale-badge">
+                    <i class="fa-solid fa-fire"></i>
+                    FLASH SALE
+                </div>
+                <h2>Limited Time Offer</h2>
+                <p>Get up to 40% off on selected items</p>
+                <div class="countdown" id="countdown">
+                    <div class="time-unit">
+                        <span class="time-value" id="hours">00</span>
+                        <span class="time-label">Hours</span>
+                    </div>
+                    <span class="separator">:</span>
+                    <div class="time-unit">
+                        <span class="time-value" id="minutes">00</span>
+                        <span class="time-label">Minutes</span>
+                    </div>
+                    <span class="separator">:</span>
+                    <div class="time-unit">
+                        <span class="time-value" id="seconds">00</span>
+                        <span class="time-label">Seconds</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================================== -->
+    <!-- CATEGORIES SECTION -->
+    <!-- ============================================================================== -->
+    <section class="categories-section">
+        <div class="container">
+            <h2 class="section-title">Shop by Category</h2>
+            <div class="categories-grid">
+                <div class="category-card" onclick="filterByCategory('electronics')">
+                    <div class="category-icon">
+                        <i class="fa-solid fa-laptop"></i>
+                    </div>
+                    <h3>Electronics</h3>
+                    <p>Latest gadgets</p>
+                </div>
+                <div class="category-card" onclick="filterByCategory('mobile')">
+                    <div class="category-icon">
+                        <i class="fa-solid fa-mobile"></i>
+                    </div>
+                    <h3>Mobile</h3>
+                    <p>Smartphones</p>
+                </div>
+                <div class="category-card" onclick="filterByCategory('accessories')">
+                    <div class="category-icon">
+                        <i class="fa-solid fa-headphones"></i>
+                    </div>
+                    <h3>Accessories</h3>
+                    <p>Tech accessories</p>
+                </div>
+                <div class="category-card" onclick="filterByCategory('lifestyle')">
+                    <div class="category-icon">
+                        <i class="fa-solid fa-shirt"></i>
+                    </div>
+                    <h3>Lifestyle</h3>
+                    <p>Fashion & more</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================================== -->
+    <!-- FEATURED PRODUCTS SECTION -->
+    <!-- ============================================================================== -->
+    <section class="featured-products-section" id="featured">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Products</h2>
+                <div class="section-controls">
+                    <button class="filter-btn active" onclick="filterByCategory('all')">All</button>
+                    <button class="filter-btn" onclick="filterByCategory('sale')">On Sale</button>
+                    <button class="filter-btn" onclick="filterByCategory('new')">New</button>
+                </div>
+            </div>
+            <div class="products-grid" id="productsGrid">
+                <!-- Products will be loaded here by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================================== -->
+    <!-- BEST SELLERS SECTION -->
+    <!-- ============================================================================== -->
+    <section class="bestsellers-section">
+        <div class="container">
+            <h2 class="section-title">Best Sellers</h2>
+            <div class="bestsellers-carousel" id="bestsellersCarousel">
+                <!-- Bestsellers will be loaded here by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================================== -->
+    <!-- PROMOTIONS SECTION -->
+    <!-- ============================================================================== -->
+    <section class="promotions-section">
+        <div class="container">
+            <div class="promo-card promo-card-1">
+                <div class="promo-content">
+                    <span class="promo-tag">Limited Offer</span>
+                    <h3>Summer Collection</h3>
+                    <p>Exclusive deals on trending items</p>
+                    <button class="btn btn-secondary">Shop Now</button>
+                </div>
+            </div>
+            <div class="promo-card promo-card-2">
+                <div class="promo-content">
+                    <span class="promo-tag">Free Shipping</span>
+                    <h3>Orders Above $50</h3>
+                    <p>Get free delivery on your next purchase</p>
+                    <button class="btn btn-secondary">Learn More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================================== -->
+    <!-- NEWSLETTER SECTION -->
+    <!-- ============================================================================== -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Subscribe to Our Newsletter</h2>
+                <p>Get the latest updates on new products and exclusive offers</p>
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+                <p class="newsletter-note">We respect your privacy. Unsubscribe at any time.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================================== -->
+    <!-- LOADING SKELETON -->
+    <!-- ============================================================================== -->
+    <div class="loading-skeleton" id="loadingSkeleton">
+        <div class="skeleton-card"></div>
+        <div class="skeleton-card"></div>
+        <div class="skeleton-card"></div>
+        <div class="skeleton-card"></div>
+    </div>
+
+    <!-- ============================================================================== -->
+    <!-- PRODUCT MODAL -->
+    <!-- ============================================================================== -->
+    <div class="product-modal" id="productModal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <img id="modalImage" src="" alt="Product">
+                </div>
+                <div class="modal-details">
+                    <h2 id="modalTitle"></h2>
+                    <div class="modal-rating">
+                        <div class="stars" id="modalRating"></div>
+                        <span id="modalReviews"></span>
+                    </div>
+                    <div class="modal-price">
+                        <span class="current-price" id="modalPrice"></span>
+                        <span class="original-price" id="modalOriginalPrice"></span>
+                        <span class="discount-badge" id="modalDiscount"></span>
+                    </div>
+                    <p class="modal-description" id="modalDescription"></p>
+                    <div class="modal-actions">
+                        <div class="quantity-selector">
+                            <button onclick="decreaseQuantity()">-</button>
+                            <input type="number" id="quantityInput" value="1" min="1">
+                            <button onclick="increaseQuantity()">+</button>
+                        </div>
+                        <button class="btn btn-primary btn-block" onclick="addToCartFromModal()">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            Add to Cart
+                        </button>
+                    </div>
+                    <div class="modal-features">
+                        <div class="feature">
+                            <i class="fa-solid fa-truck-fast"></i>
+                            <span>Free Shipping</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fa-solid fa-shield"></i>
+                            <span>Secure Payment</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fa-solid fa-rotate-left"></i>
+                            <span>Easy Return</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================================================== -->
+    <!-- TOAST NOTIFICATION -->
+    <!-- ============================================================================== -->
+    <div class="toast" id="toast">
+        <i class="fa-solid fa-check-circle"></i>
+        <span id="toastMessage"></span>
+    </div>
+
+    <!-- ============================================================================== -->
+    <!-- FOOTER -->
+    <!-- ============================================================================== -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>About Momen Hilal</h3>
+                    <p>Your premium destination for quality products and exceptional shopping experience.</p>
+                    <div class="social-links">
+                        <a href="#" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#" title="Twitter"><i class="fa-brands fa-twitter"></i></a>
+                        <a href="#" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Categories</h3>
+                    <ul>
+                        <li><a href="#">Electronics</a></li>
+                        <li><a href="#">Mobile Devices</a></li>
+                        <li><a href="#">Accessories</a></li>
+                        <li><a href="#">Lifestyle</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Support</h3>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Return Policy</a></li>
+                        <li><a href="#">FAQ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Momen Hilal Store. All rights reserved.</p>
+                <div class="payment-methods">
+                    <i class="fa-brands fa-cc-visa"></i>
+                    <i class="fa-brands fa-cc-mastercard"></i>
+                    <i class="fa-brands fa-cc-paypal"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to top button -->
+    <button class="scroll-to-top" id="scrollToTop" onclick="scrollToTop()">
+        <i class="fa-solid fa-chevron-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="index-script.js"></script>
+</body>
+</html>

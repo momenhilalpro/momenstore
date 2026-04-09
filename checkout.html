@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إتمام الطلب - متجر مومن هلال</title>
+    <link rel="stylesheet" href="File.css/css.css">
+    <link rel="stylesheet" href="File.css/header.css">
+    <link rel="stylesheet" href="File.css/footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        .checkout-hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #0b5ed7 100%);
+            padding: 40px 0;
+            text-align: center;
+            color: #fff;
+            margin-bottom: 40px;
+            animation: slideDown 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        body.dark-theme .checkout-hero {
+            background: linear-gradient(135deg, #0d85ff 0%, #0952cc 100%);
+        }
+
+        .checkout-hero h1 {
+            font-size: 2.2rem;
+            margin: 0;
+            font-weight: 700;
+        }
+
+        .checkout-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .checkout-content {
+            display: grid;
+            grid-template-columns: 1fr 380px;
+            gap: 30px;
+            margin-bottom: 40px;
+            animation: fadeInUp 0.8s ease 0.2s backwards;
+        }
+
+        @media (max-width: 768px) {
+            .checkout-content {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .offer-timer {
+            background: linear-gradient(135deg, rgba(255, 107, 107, 0.1), rgba(255, 195, 0, 0.1));
+            border: 2px solid var(--primary-color);
+            border-radius: 15px;
+            padding: 16px;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        .offer-timer-content i {
+            font-size: 1.5rem;
+            color: #ff6b6b;
+            animation: spin 2s linear infinite;
+        }
+
+        .offer-timer-text {
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+
+        .timer-countdown {
+            font-size: 1.8rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary-color), #0b5ed7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-family: 'Courier New', monospace;
+            min-width: 100px;
+            text-align: center;
+        }
+
+        .form-section {
+            background: #fff;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            animation: fadeInUp 0.8s ease 0.3s backwards;
+        }
+
+        body.dark-theme .form-section {
+            background: #2a2a2a;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #eee;
+        }
+
+        body.dark-theme .section-header {
+            border-bottom-color: #444;
+        }
+
+        .section-header i {
+            font-size: 1.4rem;
+            color: var(--primary-color);
+        }
+
+        .section-header h3 {
+            font-size: 1.25rem;
+            margin: 0;
+            font-weight: 700;
+            color: var(--text-dark);
+        }
+
+        body.dark-theme .section-header h3 {
+            color: #fff;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: var(--text-dark);
+        }
+
+        body.dark-theme .form-group label {
+            color: #ddd;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 14px;
+            border: 2px solid #e1e1e1;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: all 0.3s ease;
+            background: #fff;
+            color: var(--text-dark);
+        }
+
+        body.dark-theme .form-group input,
+        body.dark-theme .form-group select,
+        body.dark-theme .form-group textarea {
+            background: #1e1e1e;
+            border-color: #444;
+            color: #fff;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.1);
+            outline: none;
+            transform: translateY(-2px);
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        @media (max-width: 600px) {
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .payment-methods {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+
+        .payment-option input[type="radio"] {
+            display: none;
+        }
+
+        .payment-label {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            border: 2px solid #e1e1e1;
+            border-radius: 12px;
+            background: #fff;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        body.dark-theme .payment-label {
+            background: #1e1e1e;
+            border-color: #444;
+        }
+
+        .payment-option input[type="radio"]:checked + .payment-label {
+            border-color: var(--primary-color);
+            background: rgba(13, 110, 253, 0.05);
+            transform: scale(1.05);
+        }
+
+        .payment-label i {
+            font-size: 2rem;
+            margin-bottom: 8px;
+            color: var(--primary-color);
+        }
+
+        .order-summary {
+            background: #fff;
+            border-radius: 20px;
+            padding: 25px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            position: sticky;
+            top: 100px;
+            animation: fadeInUp 0.8s ease 0.4s backwards;
+        }
+
+        body.dark-theme .order-summary {
+            background: #2a2a2a;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .order-summary {
+                position: static;
+            }
+        }
+
+        .order-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        body.dark-theme .order-item {
+            border-bottom-color: #444;
+        }
+
+        .btn-submit {
+            width: 100%;
+            padding: 18px;
+            background: linear-gradient(135deg, var(--primary-color), #0b5ed7);
+            color: #fff;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            margin-top: 25px;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            box-shadow: 0 8px 20px rgba(13, 110, 253, 0.3);
+        }
+
+        .btn-submit:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 28px rgba(13, 110, 253, 0.4);
+        }
+
+        @keyframes slideDown {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(13, 110, 253, 0.3); }
+            50% { box-shadow: 0 0 0 8px rgba(13, 110, 253, 0); }
+        }
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+
+<header class="main-header">
+    <div class="header-container container">
+        <div class="logo">
+            <i class="fa-brands fa-amazon-pay"></i>
+            <span class="Momen">Momen</span><span class="Hilal"> Hilal</span>
+        </div>
+        <nav class="navbar">
+            <a href="indecx (2).html">الرئيسية</a>
+            <a href="products.html">المنتجات</a>
+            <a href="about.html">من نحن</a>
+            <a href="contact.html">تواصل معنا</a>
+            <a href="checkout.html" class="checkout-link active"><i class="fa-solid fa-credit-card"></i> الدفع</a>
+        </nav>
+        <div class="header-tools">
+            <button id="themeBtn" class="tool-btn" title="تغيير المظهر">
+                <i class="far fa-moon"></i>
+            </button>
+            <div class="cart-wrapper">
+                <button class="tool-btn cart-btn">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span id="cart-count">0</span>
+                </button>
+            </div>
+            <div class="user-wrapper">
+                <button class="tool-btn user-btn" id="userBtn">
+                    <i class="fa-solid fa-circle-user"></i>
+                </button>
+                <div class="user-dropdown" id="userDropdown">
+                    <a href="register.html">تسجيل الدخول</a>
+                    <hr>
+                    <a href="register.html">إنشاء حساب</a>
+                    <hr>
+                    <a href="login.html">تسجيل خروج</a>
+                </div>
+            </div>
+        </div>
+        <div class="menu-wrapper">
+            <button class="tool-btn menu-btn" id="bars">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <div class="menu-dropdown" id="menuBars">
+                <a href="indecx (2).html">الرئيسية</a>
+                <hr>
+                <a href="products.html">المنتجات</a>
+                <hr>
+                <a href="about.html">من نحن</a>
+                <hr>
+                <a href="contact.html">تواصل معنا</a>
+                <hr>
+                <a href="checkout.html" class="checkout-link active"><i class="fa-solid fa-credit-card"></i> إكمال الطلب</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section class="checkout-hero">
+    <div class="container">
+        <h1><i class="fa-solid fa-bag-shopping"></i> إكمال عملية الشراء</h1>
+        <p>أكمل بياناتك وأتمم طلبك بأمان وسهولة</p>
+    </div>
+</section>
+
+<main>
+    <div class="checkout-container">
+        <div class="offer-timer">
+            <div class="offer-timer-content">
+                <i class="fa-solid fa-fire"></i>
+                <span class="offer-timer-text">عرض محدود! اختم طلبك الآن</span>
+            </div>
+            <div class="timer-countdown" id="timerDisplay">10:00</div>
+        </div>
+
+        <div class="checkout-content">
+            <div class="form-section">
+                <a href="products.html" style="color: var(--primary-color); text-decoration: none; margin-bottom: 30px; display: inline-block; font-weight: 600;">
+                    <i class="fa-solid fa-arrow-right"></i> العودة للمنتجات
+                </a>
+
+                <form id="checkoutForm">
+                    <div class="section-header">
+                        <i class="fa-solid fa-truck-fast"></i>
+                        <h3>بيانات الشحن</h3>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="firstName">الاسم الأول *</label>
+                            <input type="text" id="firstName" placeholder="أدخل اسمك الأول" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">اسم العائلة *</label>
+                            <input type="text" id="lastName" placeholder="أدخل اسم العائلة" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">رقم الهاتف *</label>
+                        <input type="tel" id="phone" placeholder="01XXXXXXXXX" pattern="[0-9]{11}" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="address">العنوان بالتفصيل *</label>
+                        <textarea id="address" rows="3" placeholder="المدينة - الحي - الشارع - رقم المنزل" required></textarea>
+                    </div>
+
+                    <div class="section-header" style="margin-top: 30px;">
+                        <i class="fa-solid fa-credit-card"></i>
+                        <h3>طريقة الدفع</h3>
+                    </div>
+
+                    <div class="payment-methods">
+                        <div class="payment-option">
+                            <input type="radio" id="payment1" name="paymentMethod" value="cash" required>
+                            <label for="payment1" class="payment-label">
+                                <i class="fa-solid fa-money-bill-1-wave"></i>
+                                <span>الدفع عند الاستلام</span>
+                            </label>
+                        </div>
+                        <div class="payment-option">
+                            <input type="radio" id="payment2" name="paymentMethod" value="vodafone" required>
+                            <label for="payment2" class="payment-label">
+                                <i class="fa-brands fa-cc-visa"></i>
+                                <span>فودافون كاش</span>
+                            </label>
+                        </div>
+                        <div class="payment-option">
+                            <input type="radio" id="payment3" name="paymentMethod" value="card" required>
+                            <label for="payment3" class="payment-label">
+                                <i class="fa-solid fa-credit-card"></i>
+                                <span>بطاقة ائتمان</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn-submit">
+                        <i class="fa-brands fa-whatsapp"></i> تأكيد الطلب عبر واتساب
+                    </button>
+                </form>
+
+                <div style="text-align: center; margin-top: 20px; color: var(--text-muted);">
+                    <i class="fa-solid fa-lock"></i> تشفير آمن 256-bit SSL
+                </div>
+            </div>
+
+            <aside class="order-summary">
+                <h3 style="font-size: 1.2rem; font-weight: 700; margin-bottom: 20px; color: var(--text-dark);">
+                    <i class="fa-solid fa-list-check" style="color: var(--primary-color); margin-right: 10px;"></i> ملخص الطلب
+                </h3>
+                <div id="orderItems"></div>
+                <div style="height: 2px; background: linear-gradient(90deg, transparent, #ddd, transparent); margin: 15px 0;"></div>
+                <div style="display: flex; justify-content: space-between; margin-bottom: 10px; color: var(--text-dark);">
+                    <span>السعر الأساسي:</span>
+                    <span id="subtotal">0</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; margin-bottom: 10px; color: var(--text-dark);">
+                    <span>التوصيل (مجاني):</span>
+                    <span>مجاني</span>
+                </div>
+                <div style="display: flex; justify-content: space-between; font-size: 1.3rem; font-weight: 800; color: var(--primary-color); margin-top: 15px;">
+                    <span>الإجمالي:</span>
+                    <span id="totalAmount">0 $</span>
+                </div>
+                <div style="margin-top: 20px; padding: 15px; background: rgba(13, 110, 253, 0.08); border-radius: 10px; color: var(--text-dark); font-size: 0.9rem; text-align: center;">
+                    <i class="fa-solid fa-circle-info" style="color: var(--primary-color); margin-right: 5px;"></i>
+                    الطلب سيصل إليك خلال 2-3 أيام عمل
+                </div>
+            </aside>
+        </div>
+    </div>
+</main>
+
+<footer class="main-footer">
+        <div class="footer-container container">
+            
+            <div class="footer-box footer-about">
+                <div class="footer-logo logo">
+                    <i class="fa-brands fa-amazon-pay"></i>
+                    <span class="Momen">Momen</span><span class="Hilal"> Hilal</span>
+                </div>
+                <p class="footer-desc">متجرك الموثوق للحصول على أفضل المنتجات بأعلى جودة وأنسب الأسعار. نسعى دائمًا لتقديم تجربة تسوق سهلة وسريعة وآمنة.</p>
+                
+                <div class="footer-socials">
+                    <a href="#" target="_blank" title="فيس بوك"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" target="_blank" title="انستجرام"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://wa.me/01096429739" target="_blank" title="واتساب"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="#" target="_blank" title="تويتر (X)"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-box footer-links">
+                <h3 class="footer-title">روابط سريعة</h3>
+                <ul>
+                    <li><a href="#"><i class="fa-solid fa-chevron-left"></i> الرئيسية</a></li>
+                    <li><a href="#"><i class="fa-solid fa-chevron-left"></i> المنتجات</a></li>
+                    <li><a href="#"><i class="fa-solid fa-chevron-left"></i> العروض والخصومات</a></li>
+                    <li><a href="#"><i class="fa-solid fa-chevron-left"></i> كيفية الشراء</a></li>
+                    <li><a href="#"><i class="fa-solid fa-chevron-left"></i> سياسة الخصوصية</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-box footer-contact">
+                <h3 class="footer-title">تواصل معنا</h3>
+                <ul>
+                    <li>
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>القاهره - مصر - قنا - نقاده</span>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-phone"></i>
+                        <a href="tel:01096429739">01096429739</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-envelope"></i>
+                        <a href="mailto:info@momenhilal.com">info@momenhilal.com</a>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-clock"></i>
+                        <span>متاحون من 9 صباحًا إلى 9 مساءً</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="footer-box footer-payments">
+                <h3 class="footer-title">نقبل وسائل دفع آمنة</h3>
+                <div class="payment-icons">
+                    <i class="fa-brands fa-cc-visa" title="فيزا"></i>
+                    <i class="fa-brands fa-cc-mastercard" title="ماستركارد"></i>
+                    <i class="fa-brands fa-cc-paypal" title="بايبال"></i>
+                    <i class="fa-brands fa-fawkes" title="فوري (مثال)"></i> <i class="fa-solid fa-money-bill-1-wave" title="الدفع عند الاستلام"></i>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container footer-bottom-content">
+                <p>&copy; 2026 جميع الحقوق محفوظة لمتجر <span class="highlight">Momen Hilal</span>.</p>
+                <p class="developer">تم التطوير بواسطة <a href="#" target="_blank">فريقنا</a></p>
+            </div>
+        </div>
+    </footer>
+
+<script src="main.js"></script>
+<script src="CART.JS"></script>
+<script src="checkout.js"></script>
+<script>
+
+</script>
+
+</body>
+</html>

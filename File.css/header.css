@@ -1,0 +1,314 @@
+/* --- تنسيق الهيدر (Header) --- */
+ .main-header {
+    background: rgba(255, 255, 255, 0.84);
+    backdrop-filter: blur(14px);
+    box-shadow: 0 10px 34px rgba(20, 20, 55, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 1200;
+    padding: 14px 0;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 18px;
+}
+
+/* اللوجو */
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.logo i {
+    color: var(--primary-color);
+    margin-left: 10px;
+    font-size: 1.8rem;
+}
+
+.Momen { color: var(--text-dark); }
+.Hilal { color: var(--primary-color); }
+
+
+
+/* المنيو */
+.navbar {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar a {
+    font-weight: 500;
+    color: var(--text-muted);
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.navbar a:hover, .navbar a.active {
+    color: var(--primary-color);
+    background-color: rgba(13, 110, 253, 0.05);
+}
+
+
+/* زر الاضاءه */
+.header-tools {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.tool-btn {
+    font-size: 1.3rem;
+    color: var(--text-muted);
+    padding: 8px;
+    border-radius: 50%;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tool-btn:hover {
+    background-color: rgba(0,0,0,0.05);
+    color: var(--text-dark);
+}
+
+.themeBtn{
+    background-color: #f31202;
+}
+
+/* تنسيق الـ Dropdowns (السلة والمستخدم) */
+.cart-wrapper,
+.user-wrapper,
+.menu-wrapper {
+    position: relative; */
+}
+
+.cart-dropdown,
+.user-dropdown,
+.menu-dropdown {
+    position: absolute;
+    top: calc(100% + 8px);
+    right: 0;
+    background-color: var(--header-bg);
+    box-shadow: var(--shadow-md);
+    border-radius: 18px;
+    padding: 10px 0;
+    min-width: 220px;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-8px);
+    transition: opacity 0.22s ease, transform 0.22s ease, visibility 0.22s ease;
+    z-index: 2000;
+    pointer-events: none;
+}
+
+.cart-dropdown.dropdown-open,
+.user-dropdown.dropdown-open,
+.menu-dropdown.dropdown-open {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.cart-dropdown p {
+    color: var(--text-muted);
+    text-align: center;
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+.user-dropdown a,
+.menu-dropdown a {
+    display: block;
+    padding: 12px 18px;
+    text-align: right;
+    width: 100%;
+    color: var(--text-dark);
+    border-radius: 12px;
+    font-weight: 500;
+    transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.user-dropdown a:hover,
+.menu-dropdown a:hover {
+    background-color: rgba(13, 110, 253, 0.08);
+    color: var(--primary-color);
+}
+
+.user-dropdown a + hr,
+.menu-dropdown a + hr {
+    margin: 10px 0;
+    border: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.logout-btn {
+    background-color: #dc3545; /* أحمر للخروج */
+    color: rgb(255, 255, 255) !important;
+    margin-top: 10px;
+}
+
+.menu-btn {
+    display: none;
+    border-radius: 14px;
+    width: 44px;
+    height: 44px;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(13, 110, 253, 0.08);
+    transition: background-color 0.2s ease;
+}
+
+.menu-btn:hover {
+    background-color: rgba(13, 110, 253, 0.16);
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 1.5rem;
+    color: var(--text-dark);
+}
+
+/* زر اللغه */
+#lang-btn {
+    cursor: pointer;
+    padding: 5px 12px;
+    border: 1px solid #f31202;
+    background: transparent;
+    color: #161517;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+#lang-btn:hover {
+    background: #8e4dce;
+    color: #fff;
+}
+
+/* --- التجاوبية مع الشاشات المختلفة (Responsive) --- */
+@media (max-width: 768px) {
+    .navbar {
+        display: none;
+    }
+    .menu-toggle {
+        display: block; /* إظهار أيقونة الهامبرغر */
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+    .menu-btn{
+        display: flex;
+    }
+}
+   
+/* موبيل📱 */
+@media (max-width:1199px) {
+
+
+ header{
+  
+  padding: 10px ;
+  /* مهم */
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  background-color: #67b0f9;
+ }
+ .navbar{
+  display: none;
+ }
+  .logo{
+  font-size: 15px;
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
+ }
+
+    .hero-img{
+      width: 300px;
+      height: 300px;
+   }
+   .menu-dropdown{
+    display: none;
+   }
+   .user-dropdown{
+    margin-left: -130px;
+   }
+   
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* لازم تبقي كده علشان اغير اللغه */
+/* <h1 data-key="welcome">أهلاً بكم في متجرنا</h1>
+<p data-key="description">أفضل العروض والخصومات تجدها هنا</p>
+<a href="#" data-key="contact">اتصل بنا</a>
+
+
+// 1. قاموس الترجمة
+const i18n = {
+    "ar": {
+        "welcome": "أهلاً بكم في متجرنا",
+        "description": "أفضل العروض والخصومات تجدها هنا",
+        "contact": "اتصل بنا",
+        "btn": "English"
+    },
+    "en": {
+        "welcome": "Welcome to Our Store",
+        "description": "Find the best offers and discounts here",
+        "contact": "Contact Us",
+        "btn": "العربية"
+    }
+};
+
+function toggleLanguage() {
+    // تحديد اللغة الجديدة
+    let newLang = document.documentElement.lang === "ar" ? "en" : "ar";
+    
+    // حفظ اللغة في المتصفح
+    localStorage.setItem("lang", newLang);
+    
+    // تنفيذ التغيير
+    applyLang(newLang);
+}
+
+function applyLang(lang) {
+    // 1. تغيير لغة واتجاه الصفحة
+    document.documentElement.lang = lang;
+    document.documentElement.dir = (lang === "ar") ? "rtl" : "ltr";
+
+    // 2. تغيير النصوص اللي ليها data-key
+    document.querySelectorAll("[data-key]").forEach(el => {
+        let key = el.getAttribute("data-key");
+        el.innerText = i18n[lang][key];
+    });
+
+    // 3. تغيير نص الزرار نفسه
+    document.getElementById("lang-btn").innerText = i18n[lang]["btn"];
+}
+
+// تشغيل اللغة المحفوظة أول ما الصفحة تفتح
+window.onload = () => {
+    let savedLang = localStorage.getItem("lang") || "ar";
+    applyLang(savedLang);
+}; */

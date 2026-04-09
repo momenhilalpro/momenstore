@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تفاصيل المنتج</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="File.css/data.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="product-card">
+    <div class="fav-container">
+        <button class="fav-btn" onclick="toggleFav(this)">
+            <i class="fa-regular fa-heart"></i>
+        </button>
+    </div>
+
+    <div class="product-image">
+        <img src="momen.ggg/blo.jpg" alt="سماعة بلوتوث">
+    </div>
+
+    <div class="product-info">
+        <h2 id="product-name">سماعة بلوتوث </h2>
+        <p class="price" id="product-price">250 $</p>
+
+        <div class="rating">
+            <span class="star-wrapper" onclick="rate(this, 1)"><i class="fa-regular fa-star"></i></span>
+            <span class="star-wrapper" onclick="rate(this, 2)"><i class="fa-regular fa-star"></i></span>
+            <span class="star-wrapper" onclick="rate(this, 3)"><i class="fa-regular fa-star"></i></span>
+            <span class="star-wrapper" onclick="rate(this, 4)"><i class="fa-regular fa-star"></i></span>
+            <span class="star-wrapper" onclick="rate(this, 5)"><i class="fa-regular fa-star"></i></span>
+        </div>
+
+        <p class="description">صوت محيطي نقي مع تقنية إلغاء الضوضاء النشطة.</p>
+
+        <button class="add-btn" onclick="addToCartDetails()">أضف للسلة 🛒</button>
+    </div>
+</div>
+
+<div id="toast"></div>
+
+<script>
+   // 1. أول ما الصفحة تفتح (قراءة بيانات المنتج من الرابط)
+window.onload = function() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const name = urlParams.get('name');
+    const price = urlParams.get('price');
+    const img = urlParams.get('img');
+
+    if (name && price && img) {
+        document.getElementById("product-name").innerText = name;
+        document.getElementById("product-price").innerText = price + " $";
+        document.querySelector(".product-image img").src = img;
+    }
+};
+
+// 2. دالة التقييم (النجوم) - دي تفضل زي ما هي
+function rate(el, value) {
+    let parent = el.parentElement;
+    let stars = parent.querySelectorAll("i");
+    stars.forEach((star, index) => {
+        if (index < value) {
+            star.classList.replace("fa-regular", "fa-solid");
+            star.classList.add("active");
+        } else {
+            star.classList.replace("fa-solid", "fa-regular");
+            star.classList.remove("active");
+        }
+    });
+    showToast("شكراً لتقييمك! ⭐");
+}
+
+// 3. دالة التنبيه (Toast)
+function showToast(msg) {
+    let t = document.getElementById("toast");
+    t.innerText = msg;
+    t.style.opacity = "1";
+    t.style.visibility = "visible";
+    setTimeout(() => { 
+        t.style.opacity = "0"; 
+        t.style.visibility = "hidden";
+    }, 2000);
+}
+
+// 4. دالة إضافة للسلة (تأكد إنها بتسحب البيانات الحالية)
+function addToCartDetails() {
+    let name = document.getElementById("product-name").innerText;
+    let price = document.getElementById("product-price").innerText;
+    
+    // هنا ممكن تضيف كود الحفظ في localStorage
+    showToast("تم إضافة " + name + " للسلة ✅");
+}
+
+// 5. دالة المفضلة
+function toggleFav(btn) {
+    btn.innerText = (btn.innerText === "🤍") ? "❤️" : "🤍";
+    showToast(btn.innerText === "❤️" ? "تمت الإضافة للمفضلة" : "تم الحذف من المفضلة");
+}
+</script>
+
+</body>
+</html>

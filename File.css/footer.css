@@ -1,0 +1,218 @@
+/* --- تنسيق الفوتر (Footer) --- */
+.main-footer {
+    background-color: #1a1d21; /* لون خلفية غامق واحترافي */
+    color: rgba(255, 255, 255, 0.8); /* لون نص أبيض باهت قليلاً */
+    padding-top: 60px;
+    margin-top: auto; /* ليدفع الفوتر للأسفل في حالة الصفحة الفارغة */
+    border-top: 4px solid var(--primary-color); /* شريط علوي بلون المتجر */
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* تخطيط شبكي متجاوب */
+    gap: 30px;
+    padding-bottom: 40px;
+}
+
+.footer-box {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* العمود الأول: اللوجو والوصف */
+.footer-logo {
+    justify-content: flex-start; /* لضبط اللوجو لليمين */
+}
+.footer-logo span.Momen, .footer-logo span.Hilal {
+    color: white; /* جعل اللوجو أبيض في الفوتر */
+}
+.footer-logo i {
+    color: var(--accent-color); /* الأيقونة بلون مختلف */
+}
+
+.footer-desc {
+    font-size: 0.95rem;
+    line-height: 1.8;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.footer-socials a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.08);
+    color: white;
+    font-size: 1.1rem;
+    transition: var(--transition);
+}
+
+.footer-socials a:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-3px) scale(1.05);
+}
+
+/* عناوين الأعمدة */
+.footer-title {
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    position: relative;
+    padding-bottom: 8px;
+}
+
+.footer-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0; /* لأن dir=rtl */
+    width: 40px;
+    height: 3px;
+    background-color: var(--accent-color);
+    border-radius: 2px;
+}
+
+/* القوائم (روابط ومعلومات) */
+.footer-links ul, .footer-contact ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-links a {
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.footer-links a i {
+    font-size: 0.7rem;
+    color: var(--primary-color);
+    transition: var(--transition);
+}
+
+.footer-links a:hover {
+    color: white;
+    padding-right: 5px; /*dir=rtl لليسار*/
+}
+
+.footer-links a:hover i {
+    color: var(--accent-color);
+}
+
+/* معلومات التواصل */
+.footer-contact li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 0.95rem;
+}
+
+.footer-contact li i {
+    color: var(--accent-color);
+    font-size: 1.1rem;
+    margin-top: 4px; /* لضبط الأيقونة مع أول سطر */
+}
+
+.footer-contact li a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+/* وسائل الدفع */
+.payment-icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    font-size: 1.8rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.payment-icons i:hover {
+    color: white;
+    transform: scale(1.1);
+    transition: var(--transition);
+}
+
+/* شريط الحقوق السفلي */
+.footer-bottom {
+    background-color: #15181b;
+    padding: 20px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-bottom-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.footer-bottom .highlight {
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.developer a {
+    color: var(--accent-color);
+    font-weight: 500;
+}
+
+.developer a:hover {
+    text-decoration: underline;
+}
+
+/* --- التجاوبية (Responsive) --- */
+@media (max-width: 768px) {
+    .main-footer {
+        padding-top: 40px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr; /* عمود واحد على الموبايل */
+        text-align: center;
+        gap: 35px;
+    }
+
+    .footer-logo {
+        justify-content: center; /* توسيط اللوجو على الموبايل */
+    }
+
+    .footer-title::after {
+        right: 50%;
+        transform: translateX(50%); /* توسيط الخط العلوي */
+    }
+
+    .footer-socials {
+        justify-content: center;
+    }
+
+    .footer-links a {
+        justify-content: center;
+    }
+
+    .footer-contact li {
+        justify-content: center;
+    }
+
+    .payment-icons {
+        justify-content: center;
+    }
+
+    .footer-bottom-content {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
