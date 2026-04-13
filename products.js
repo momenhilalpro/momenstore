@@ -43,7 +43,7 @@ function renderProducts(list) {
                         </div>
                     </div>
                     <div class="product-buttons">
-                        <button class="m" onclick="addToCart('${product.name.replace(/'/g, "\\'")}'، ${product.price})">أضف للسلة</button>
+                        <button class="m" onclick="addToCart('${product.name.replace(/'/g, "\\'")}', ${product.price})">أضف للسلة</button>
                         <a class="pr" href="product.html?name=${encodeURIComponent(product.name)}&price=${encodeURIComponent(product.price)}&img=${encodeURIComponent(product.img)}">التفاصيل</a>
                     </div>
                 </div>

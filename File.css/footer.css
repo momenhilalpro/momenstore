@@ -175,44 +175,232 @@
 }
 
 /* --- التجاوبية (Responsive) --- */
-@media (max-width: 768px) {
+
+/* Tablet Landscape - 1024px and below */
+@media (max-width: 1024px) {
     .main-footer {
-        padding-top: 40px;
+        padding-top: 50px;
     }
 
     .footer-container {
-        grid-template-columns: 1fr; /* عمود واحد على الموبايل */
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+
+    .footer-title {
+        font-size: 1.1rem;
+    }
+
+    .footer-desc {
+        font-size: 0.9rem;
+    }
+
+    .footer-links a,
+    .footer-contact li {
+        font-size: 0.9rem;
+    }
+
+    .payment-icons {
+        font-size: 1.6rem;
+    }
+}
+
+/* Tablet Portrait - 768px and below */
+@media (max-width: 768px) {
+    .main-footer {
+        padding-top: 40px;
+        border-top: 3px solid var(--primary-color);
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
         text-align: center;
-        gap: 35px;
+        gap: 30px;
+        padding-bottom: 30px;
     }
 
     .footer-logo {
-        justify-content: center; /* توسيط اللوجو على الموبايل */
+        justify-content: center;
+    }
+
+    .footer-title {
+        font-size: 1.05rem;
+        margin-bottom: 12px;
     }
 
     .footer-title::after {
         right: 50%;
-        transform: translateX(50%); /* توسيط الخط العلوي */
+        transform: translateX(50%);
+        width: 35px;
     }
 
     .footer-socials {
         justify-content: center;
+        gap: 10px;
+    }
+
+    .footer-socials a {
+        width: 36px;
+        height: 36px;
+        font-size: 1rem;
+    }
+
+    .footer-links ul,
+    .footer-contact ul {
+        gap: 10px;
     }
 
     .footer-links a {
         justify-content: center;
+        font-size: 0.9rem;
     }
 
     .footer-contact li {
         justify-content: center;
+        font-size: 0.9rem;
+        gap: 8px;
     }
 
     .payment-icons {
         justify-content: center;
+        font-size: 1.5rem;
+        gap: 12px;
     }
 
     .footer-bottom-content {
         flex-direction: column;
         gap: 10px;
+        font-size: 0.8rem;
+    }
+
+    .footer-desc {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+}
+
+/* Mobile Large - 480px to 767px */
+@media (max-width: 480px) {
+    .main-footer {
+        padding-top: 30px;
+        border-top: 2px solid var(--primary-color);
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        padding-bottom: 20px;
+    }
+
+    .footer-box {
+        gap: 12px;
+    }
+
+    .footer-logo {
+        gap: 10px;
+    }
+
+    .footer-logo i {
+        font-size: 1.4rem;
+    }
+
+    .footer-desc {
+        font-size: 0.85rem;
+        line-height: 1.5;
+    }
+
+    .footer-title {
+        font-size: 0.95rem;
+        margin-bottom: 10px;
+    }
+
+    .footer-title::after {
+        width: 30px;
+        height: 2px;
+    }
+
+    .footer-socials {
+        gap: 8px;
+        margin-top: 8px;
+    }
+
+    .footer-socials a {
+        width: 34px;
+        height: 34px;
+        font-size: 0.9rem;
+    }
+
+    .footer-links ul,
+    .footer-contact ul {
+        gap: 8px;
+    }
+
+    .footer-links a {
+        font-size: 0.85rem;
+        gap: 6px;
+    }
+
+    .footer-contact li {
+        font-size: 0.85rem;
+        gap: 6px;
+    }
+
+    .payment-icons {
+        font-size: 1.3rem;
+        gap: 10px;
+    }
+
+    .footer-bottom {
+        padding: 15px 0;
+    }
+
+    .footer-bottom-content {
+        font-size: 0.75rem;
+        gap: 8px;
+    }
+}
+
+/* Mobile Small - up to 379px */
+@media (max-width: 379px) {
+    .main-footer {
+        padding-top: 25px;
+    }
+
+    .footer-container {
+        gap: 20px;
+        padding-bottom: 15px;
+    }
+
+    .footer-box {
+        gap: 10px;
+    }
+
+    .footer-desc {
+        font-size: 0.8rem;
+    }
+
+    .footer-title {
+        font-size: 0.9rem;
+        margin-bottom: 8px;
+    }
+
+    .footer-title::after {
+        width: 25px;
+        height: 2px;
+    }
+
+    .footer-socials a {
+        width: 32px;
+        height: 32px;
+        font-size: 0.85rem;
+    }
+
+    .footer-links a,
+    .footer-contact li {
+        font-size: 0.8rem;
+    }
+
+    .payment-icons {
+        font-size: 1.2rem;
     }
 }

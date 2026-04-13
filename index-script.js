@@ -569,40 +569,40 @@ function scrollToTop() {
 // COUNTDOWN TIMER
 // ============================================================================== 
 
-function startCountdown() {
-    const hours = document.getElementById('hours');
-    const minutes = document.getElementById('minutes');
-    const seconds = document.getElementById('seconds');
+// function startCountdown() {
+//     const hours = document.getElementById('hours');
+//     const minutes = document.getElementById('minutes');
+//     const seconds = document.getElementById('seconds');
     
-    const updateCountdown = () => {
-        let h = parseInt(hours.textContent);
-        let m = parseInt(minutes.textContent);
-        let s = parseInt(seconds.textContent);
+//     const updateCountdown = () => {
+//         let h = parseInt(hours.textContent);
+//         let m = parseInt(minutes.textContent);
+//         let s = parseInt(seconds.textContent);
         
-        if (s > 0) {
-            s--;
-        } else if (m > 0) {
-            s = 59;
-            m--;
-        } else if (h > 0) {
-            m = 59;
-            s = 59;
-            h--;
-        } else {
-            h = 23;
-            m = 59;
-            s = 59;
-        }
+//         if (s > 0) {
+//             s--;
+//         } else if (m > 0) {
+//             s = 59;
+//             m--;
+//         } else if (h > 0) {
+//             m = 59;
+//             s = 59;
+//             h--;
+//         } else {
+//             h = 23;
+//             m = 59;
+//             s = 59;
+//         }
         
-        hours.textContent = String(h).padStart(2, '0');
-        minutes.textContent = String(m).padStart(2, '0');
-        seconds.textContent = String(s).padStart(2, '0');
-    };
+//         hours.textContent = String(h).padStart(2, '0');
+//         minutes.textContent = String(m).padStart(2, '0');
+//         seconds.textContent = String(s).padStart(2, '0');
+//     };
     
-    setInterval(updateCountdown, 1000);
-}
+//     setInterval(updateCountdown, 1000);
+// }
 
-startCountdown();
+// startCountdown();
 
 // ============================================================================== 
 // UI UTILITIES

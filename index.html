@@ -1,29 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Momen Hilal - Premium E-commerce Store</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <meta name="description" content="متجر مومن هلال - أفضل العروض والمنتجات بأعلى جودة">
+    <title>Momen Hilal | متجرك الموثوق</title>
+    
+    <!-- Fonts & Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="File.css/header.css">
     <link rel="stylesheet" href="File.css/footer.css">
     <link rel="stylesheet" href="File.css/main-design.css">
-    <!-- <link rel="stylesheet" href="index-style.css"> -->
+    <link rel="stylesheet" href="File.css/responsive.css">
     <link rel="stylesheet" href="File.css/css.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-    <script>
-        // if(localStorage.getItem("loggedIn") !== "true"){
-        //     window.location.href = "login.html";
-        // }
-    </script>
 </head>
 <body>
-    <!-- الهيدر  -->
+
+<!-- ========== HEADER ========== -->
 <header class="main-header">
     <div class="header-container container">
-        
         <div class="logo">
             <i class="fa-brands fa-amazon-pay"></i>
             <span class="Momen">Momen</span><span class="Hilal"> Hilal</span>
@@ -32,45 +30,43 @@
         <nav class="navbar">
             <a href="index.html" class="active">الرئيسية</a>
             <a href="products.html">المنتجات</a>
-            <a href="checkout.html" class="checkout-link active"><i class="fa-solid fa-credit-card"></i> الدفع</a>
+            <a href="about.html">من نحن</a>
             <a href="contact.html">تواصل معنا</a>
+            <a href="checkout.html" class="checkout-link"><i class="fa-solid fa-credit-card"></i> الدفع</a>
         </nav>
-<!-- تغيير زر الاضاءه -->
+
         <div class="header-tools">
-            <button id="themeBtn" class="tool-btn" title="تغيير المظهر"><i class="fa-solid fa-moon"></i></button>
+            <button id="themeBtn" class="tool-btn" title="تغيير المظهر">
+                <i class="far fa-moon"></i>
+            </button>
 
             <div class="cart-wrapper">
                 <button class="tool-btn cart-btn">
                     <i class="fa-solid fa-cart-shopping"></i>
                     <span id="cart-count">0</span>
                 </button>
-                <div class="cart-dropdown" id="cartDropdown">  
-                    <p>السلة فارغة حالياً</p>
-                </div>
             </div>
-            <!-- زر اللغه -->
-<button id="lang-btn" onclick="toggleLanguage()">English</button>
-<!-- ايقونة المستخدم -->
+
             <div class="user-wrapper">
                 <button class="tool-btn user-btn" id="userBtn">
                     <i class="fa-solid fa-circle-user"></i>
                 </button>
                 <div class="user-dropdown" id="userDropdown">
-                    <a href="register.html">تسجيل الدخول</a>
+                    <a href="login.html">تسجيل الدخول</a>
                     <hr>
                     <a href="register.html">إنشاء حساب</a>
                     <hr>
-                    <a href="login.html" >تسجيل خروج</a>
+                    <a href="login.html">تسجيل خروج</a>
                 </div>
             </div>
         </div>
-        
-         <div class="menu-wrapper">
+
+        <div class="menu-wrapper">
             <button class="tool-btn menu-btn" id="bars">
                 <i class="fa-solid fa-bars"></i>
             </button>
             <div class="menu-dropdown" id="menuBars">
-                <a href="indecx (2).html">الرئيسية</a>
+                <a href="index.html">الرئيسية</a>
                 <hr>
                 <a href="products.html">المنتجات</a>
                 <hr>
@@ -78,363 +74,192 @@
                 <hr>
                 <a href="contact.html">تواصل معنا</a>
                 <hr>
-                <a href="checkout.html" class="checkout-link active"><i class="fa-solid fa-credit-card"></i> إكمال الطلب</a>
+                <a href="checkout.html"><i class="fa-solid fa-credit-card"></i> إكمال الطلب</a>
             </div>
         </div>
     </div>
-
-    </div>
 </header>
 
+<!-- ========== MAIN CONTENT ========== -->
 <main>
+    <!-- Hero Section -->
     <section class="hero-section">
         <img class="hero-bg-img" src="momen.ggg/M1.jpg" alt="متجر مومن هلال">
-        
         <div class="hero-content container">
-            <h2 class="hero-title">Welcome To <span class="Store-highlight">Momen Hilal</span> Store</h2>
-            <p class="hero-subtitle">Choose your product and add it to cart easily</p>
-            
-            <a href="checkout.html" class="cta-btn">إتمام الشراء <i class="fa-solid fa-arrow-left"></i></a>
+            <h2 class="hero-title">مرحباً بك في <span class="Store-highlight">Momen Hilal</span></h2>
+            <p class="hero-subtitle">أفضل المنتجات بأفضل الأسعار - تسوق بثقة وسهولة</p>
+            <a href="products.html" class="cta-btn">تسوق الآن <i class="fa-solid fa-arrow-left"></i></a>
             
             <div class="hero-search-box">
-                <input class="search-input" type="text" id="myInput" onkeyup="searchProducts()" placeholder="ابحث عن منتج...">
+                <input class="search-input" type="text" id="homeSearch" placeholder="ابحث عن منتج...">
                 <button class="search-submit-btn" id="searchBtn">
                     <i class="fa-solid fa-magnifying-glass"></i> بحث
                 </button>
             </div>
-         
+        </div>
+    </section>
+
+    <!-- Featured Products Section -->
+    <section class="featured-products-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="header-content">
+                    <h2 class="section-title">
+                        <i class="fa-solid fa-star"></i>
+                        منتجات مميزة
+                    </h2>
+                    <p class="section-subtitle">أحدث وأفضل المنتجات المختارة بعناية لك</p>
+                </div>
+                <a href="products.html" class="view-all-link">
+                    عرض الكل <i class="fa-solid fa-arrow-left"></i>
+                </a>
+            </div>
+            <div id="homeProductGrid" class="product-grid-home"></div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-truck-fast"></i></div>
+                    <h3>توصيل سريع</h3>
+                    <p>توصيل خلال 2-3 أيام عمل لجميع المحافظات</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-shield-heart"></i></div>
+                    <h3>دفع آمن</h3>
+                    <p>طرق دفع متعددة وآمنة 100%</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-headset"></i></div>
+                    <h3>دعم على مدار الساعة</h3>
+                    <p>فريق دعم جاهز لمساعدتك 24/7</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-arrow-rotate-left"></i></div>
+                    <h3>استرجاع مجاني</h3>
+                    <p>استرجاع المنتجات خلال 14 يوماً</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>عروض حصرية بمناسبة افتتاح المتجر</h2>
+                <p>خصم يصل إلى 50% على أول طلب - استخدم الكود: WELCOME50</p>
+                <div class="cta-buttons">
+                    <a href="products.html" class="cta-btn primary">تسوق الآن <i class="fa-solid fa-bag-shopping"></i></a>
+                    <a href="contact.html" class="cta-btn secondary">اتصل بنا <i class="fa-solid fa-headset"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
 </main>
-    <br><br><br><br>
-    <!-- 🛒
- <div class="cart-icon" onclick="toggleCart()">
-    <i class="fa-solid fa-cart-flatbed"></i>
-   </div>
-   <div id="cart-box" >
- <h3>محتوي السله</h3>
-<ul id="cart-items"></ul>
-<p>منتج1</p>
-   </div> -->
 
-  
-<!-- المنتجات -->
-  
-
-     <!-- <section class="products1">
-         <div class="product">
-             <span class="badge"> </span>
-            <img src="momen.jpg" alt="">
-            <h3> مؤمن هلال</h3>
-            <p class="price"> $ لا يقدر بثمن</p>
-               <div class="rating">
-<span onclick="rate(this,1)"><i class="fa-regular fa-star"></i></span>
-<span onclick="rate(this,2)"><i class="fa-regular fa-star"></i></span>
-<span onclick="rate(this,3)"><i class="fa-regular fa-star"></i></span>
-<span onclick="rate(this,4)"><i class="fa-regular fa-star"></i></span>
-<span onclick="rate(this,5)"><i class="fa-regular fa-star"></i></span>
-<button  onclick="toggleFav(this)">🤍</button>
-
-            </div>
-            <div class="buttons">
-      <button class="m" onclick="addToCart('شاحن ', 1200)">إضافة للسلة 🛒</button>
-</div>
-
-<a class="pr"  href="product.html?name=ساعة ذكية&price=500&img=momen.jpg" class="view-details-link">عرض التفاصيل</a>
-
-        </div>
-         <div class="product">
-             <span class="badge">غير متوفر</span>
-            <img src="fier.jpg" alt="">
-            <h3> اسطوانة غاز </h3>
-            <p class="price"> $ 3000</p>
-               <div class="rating">
-<span onclick="rate(this,1)"><i class="fa-regular fa-star"></i></span>
-<span onclick="rate(this,2)"><i class="fa-regular fa-star"></i></span>
-<span onclick="rate(this,3)"><i class="fa-regular fa-star"></i></span>
-<span onclick="rate(this,4)"><i class="fa-regular fa-star"></i></span>
-<span onclick="rate(this,5)"><i class="fa-regular fa-star"></i></span>
-<button onclick="toggleFav(this)">🤍</button>
-            </div>
-            <div class="buttons">
-      <button onclick="addToCart('شاحن ', 1200)">إضافة للسلة 🛒</button>
-</div>
-<a class="pr"  href="product.html?name=ساعة ذكية&price=500&img=momen.jpg" class="view-details-link">عرض التفاصيل</a>
-        </div>
-        <div class="product">
-            <span class="badge">خصم</span>
-            <img src="blo.jpg" alt="">
-            <h3>سماعه بلوتوث</h3>
-            <p class="price"> $ 250</p>
-               <div class="rating">
-<span onclick="rate(this,1)"><i class="fa-regular fa-star"></i></span>
-<span onclick="rate(this,2)"><i class="fa-regular fa-star"></i></span>
-<span onclick="rate(this,3)"><i class="fa-regular fa-star"></i></span>
-<span onclick="rate(this,4)"><i class="fa-regular fa-star"></i></span>
-<span onclick="rate(this,5)"><i class="fa-regular fa-star"></i></span>
-<button onclick="toggleFav(this)">🤍</button>
-            </div>
-             <div class="buttons">
-<a href="product.html?name= سماعه &price=500&img=watch.jpg" class="view-details-link">عرض التفاصيل</a>
-      <button onclick="addToCart('سماعه بلوتوث', 250 )">إضافة للسلة 🛒</button>
-</div>
-          
-
-        </div>
-
-        <div class="product">
-             <span class="badge">غير متوفر</span>
-            <img src="typec.jpg" alt="">
-            <h3> شاحن</h3>
-            <p class="price"> $ 150</p>
-               <div class="rating">
-<span onclick="rate(this,1)"><i class="fa-regular fa-star"></i></span>
-<span onclick="rate(this,2)"><i class="fa-regular fa-star"></i></span>
-<span onclick="rate(this,3)"><i class="fa-regular fa-star"></i></span>
-<span onclick="rate(this,4)"><i class="fa-regular fa-star"></i></span>
-<span onclick="rate(this,5)"><i class="fa-regular fa-star"></i></span>
-<button onclick="toggleFav(this)">🤍</button>
-            </div>
-            <div class="buttons">
-<a href="product.html?name=ساعة ذكية&price=500&img=watch.jpg" class="view-details-link">عرض التفاصيل</a>
-      <button onclick="addToCart('شاحن ', 1200)">إضافة للسلة 🛒</button>
-</div>
-        </div>
-        <div class="product">
-             <span class="badge">جديد</span>
-            <img src="labtop.jpg" alt="">
-            <h3> لاب توب
-            </h3>
-            <p class="price"> $ 20000</p>
-               <div class="rating">
-<span onclick="rate(this,1)"><i class="fa-regular fa-star"></i></span>
-<span onclick="rate(this,2)"><i class="fa-regular fa-star"></i></span>
-<span onclick="rate(this,3)"><i class="fa-regular fa-star"></i></span>
-<span onclick="rate(this,4)"><i class="fa-regular fa-star"></i></span>
-<span onclick="rate(this,5)"><i class="fa-regular fa-star"></i></span>
-<button onclick="toggleFav(this)">🤍</button>
-            </div>
-            <div class="buttons">
-<a href="product.html?name=ساعة ذكية&price=500&img=watch.jpg" class="view-details-link">عرض التفاصيل</a>
-      <button onclick="addToCart('لاب توب', 20000)">إضافة للسلة 🛒</button>
-
-</div>
-        </div>
-        <div class="product">
-            <img src="Smart.jpg" alt="">
-            <h3> ساعه ذكيه</h3>
-            <p class="price"> $ 1500</p>
-               <div class="rating">
-<span onclick="rate(this,1)"><i class="fa-regular fa-star"></i></span>
-<span onclick="rate(this,2)"><i class="fa-regular fa-star"></i></span>
-<span onclick="rate(this,3)"><i class="fa-regular fa-star"></i></span>
-<span onclick="rate(this,4)"><i class="fa-regular fa-star"></i></span>
-<span onclick="rate(this,5)"><i class="fa-regular fa-star"></i></span>
-<button onclick="toggleFav(this)">🤍</button>
-            </div>
-             <div class="buttons">
-<a href="product.html?name=ساعة ذكية&price=500&img=watch.jpg" class="view-details-link">عرض التفاصيل</a>
-      <button onclick="addToCart('ساعة ذكية', 1500)">إضافة للسلة 🛒</button>
-
-</div>
-          
-
-        </div>
-        <div class="product">
-            <img src="mobile.jpg" alt="">
-            <h3>موبيل</h3>
-            <p class="price"> $ 3000</p>
-               <div class="rating">
-<span onclick="rate(this,1)"><i class="fa-regular fa-star"></i></span>
-<span onclick="rate(this,2)"><i class="fa-regular fa-star"></i></span>
-<span onclick="rate(this,3)"><i class="fa-regular fa-star"></i></span>
-<span onclick="rate(this,4)"><i class="fa-regular fa-star"></i></span>
-<span onclick="rate(this,5)"><i class="fa-regular fa-star"></i></span>
-<button onclick="toggleFav(this)">🤍</button>
-            </div>
-             <div class="buttons">
-<a href="product.html?name=ساعة ذكية&price=500&img=watch.jpg" class="view-details-link">عرض التفاصيل</a>
-      <button onclick="addToCart('موبيل ', 3000)">إضافة للسلة 🛒</button>
-
-</div>
- </div>
-        <div class="product">
-            <img src="tosiba.jpg" alt="">
-            <h3>تلاجه توشيبا</h3>
-            <p class="price"> $ 50000</p>
-               <div class="rating">
-<span onclick="rate(this,1)"><i class="fa-regular fa-star"></i></span>
-<span onclick="rate(this,2)"><i class="fa-regular fa-star"></i></span>
-<span onclick="rate(this,3)"><i class="fa-regular fa-star"></i></span>
-<span onclick="rate(this,4)"><i class="fa-regular fa-star"></i></span>
-<span onclick="rate(this,5)"><i class="fa-regular fa-star"></i></span>
-<button onclick="toggleFav(this)">🤍</button>
-            </div>
-             <div class="buttons">
-<a href="product.html?name=ساعة ذكية&price=500&img=watch.jpg" class="view-details-link">عرض التفاصيل</a>
-      <button onclick="addToCart('ثلاجه توشيبا', 50000)">إضافة للسلة 🛒</button>
-
-</div>
- </div>
-        <div class="product">
-            <img src="smart1.jpg" alt="">
-            <h3>ساعه سمارة</h3>
-            <p class="price"> $ 500</p>
-               <div class="rating">
-<span onclick="rate(this,1)"><i class="fa-regular fa-star"></i></span>
-<span onclick="rate(this,2)"><i class="fa-regular fa-star"></i></span>
-<span onclick="rate(this,3)"><i class="fa-regular fa-star"></i></span>
-<span onclick="rate(this,4)"><i class="fa-regular fa-star"></i></span>
-<span onclick="rate(this,5)"><i class="fa-regular fa-star"></i></span>
-<button onclick="toggleFav(this)">🤍</button>
-            </div>
-             <div class="buttons">
-<a href="product.html?name=ساعة ذكية&price=500&img=watch.jpg" class="view-details-link">عرض التفاصيل</a>
-      <button onclick="addToCart('ساعة سمارة', 500)">إضافة للسلة 🛒</button>
-
-</div>
- </div>
-        <div class="product">
-            <img src="Screenshot_2026-03-25-23-31-28-52.jpg" alt="">
-            <h3>بدله كلاسيك</h3>
-            <p class="price"> $ 2000</p>
-               <div class="rating">
-<span onclick="rate(this,1)"><i class="fa-regular fa-star"></i></span>
-<span onclick="rate(this,2)"><i class="fa-regular fa-star"></i></span>
-<span onclick="rate(this,3)"><i class="fa-regular fa-star"></i></span>
-<span onclick="rate(this,4)"><i class="fa-regular fa-star"></i></span>
-<span onclick="rate(this,5)"><i class="fa-regular fa-star"></i></span>
-<button onclick="toggleFav(this)">🤍</button>
-            </div>
-             <div class="buttons">
-<a href="product.html?name=ساعة ذكية&price=500&img=watch.jpg" class="view-details-link">عرض التفاصيل</a>
-      <button onclick="addToCart('بدله كلاسيك', 2000)">إضافة للسلة 🛒</button>
-
-</div>
- </div>
-        <div class="product">
-            <img src="IMG_٢٠٢٦٠٣٢٥_٢٣٣١٥٨.jpg" alt="">
-            <h3>بدله كلاسيك</h3>
-            <p class="price"> $ 2500</p>
-            <div class="rating">
-<span onclick="rate(this,1)"><i class="fa-regular fa-star"></i></span>
-<span onclick="rate(this,2)"><i class="fa-regular fa-star"></i></span>
-<span onclick="rate(this,3)"><i class="fa-regular fa-star"></i></span>
-<span onclick="rate(this,4)"><i class="fa-regular fa-star"></i></span>
-<span onclick="rate(this,5)"><i class="fa-regular fa-star"></i></span>
-<button onclick="toggleFav(this)">🤍</button>
-            </div>
-             <div class="buttons">
-<a href="product.html?name=ساعة ذكية&price=500&img=watch.jpg" class="view-details-link">عرض التفاصيل</a>
-      <button onclick="addToCart('بدله كلاسيك', 2500)">إضافة للسلة 🛒</button>
-
-</div>
- </div>
-        <div class="product">
-            <img src="IMG_٢٠٢٦٠٣٢٥_٢٣٣٠٠٤.jpg" alt="">
-            <h3>غسالة اطباق</h3>
-            <p class="price"> 4 15000</p>
-               <div class="rating">
-<span onclick="rate(this,1)"><i class="fa-regular fa-star"></i></span>
-<span onclick="rate(this,2)"><i class="fa-regular fa-star"></i></span>
-<span onclick="rate(this,3)"><i class="fa-regular fa-star"></i></span>
-<span onclick="rate(this,4)"><i class="fa-regular fa-star"></i></span>
-<span onclick="rate(this,5)"><i class="fa-regular fa-star"></i></span>
-<button onclick="toggleFav(this)">🤍</button>
-            </div>
-             <div class="buttons">
-<a href="product.html?name=ساعة ذكية&price=500&img=watch.jpg" class="view-details-link">عرض التفاصيل</a>
-      <button  onclick="addToCart('غسالة اطباق', 15000)">إضافة للسلة 🛒</button>
-
-</div>
-
-          
-
-        </div>
-
-     </section> -->
-
+<!-- ========== FOOTER ========== -->
 <footer class="main-footer">
-        <div class="footer-container container">
-            
-            <div class="footer-box footer-about">
-                <div class="footer-logo logo">
-                    <i class="fa-brands fa-amazon-pay"></i>
-                    <span class="Momen">Momen</span><span class="Hilal"> Hilal</span>
-                </div>
-                <p class="footer-desc">متجرك الموثوق للحصول على أفضل المنتجات بأعلى جودة وأنسب الأسعار. نسعى دائمًا لتقديم تجربة تسوق سهلة وسريعة وآمنة.</p>
-                
-                <div class="footer-socials">
-                    <a href="#" target="_blank" title="فيس بوك"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#" target="_blank" title="انستجرام"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://wa.me/01096429739" target="_blank" title="واتساب"><i class="fa-brands fa-whatsapp"></i></a>
-                    <a href="#" target="_blank" title="تويتر (X)"><i class="fa-brands fa-x-twitter"></i></a>
-                </div>
+    <div class="footer-container container">
+        <div class="footer-box footer-about">
+            <div class="footer-logo logo">
+                <i class="fa-brands fa-amazon-pay"></i>
+                <span class="Momen">Momen</span><span class="Hilal"> Hilal</span>
             </div>
-
-            <div class="footer-box footer-links">
-                <h3 class="footer-title">روابط سريعة</h3>
-                <ul>
-                    <li><a href="#"><i class="fa-solid fa-chevron-left"></i> الرئيسية</a></li>
-                    <li><a href="#"><i class="fa-solid fa-chevron-left"></i> المنتجات</a></li>
-                    <li><a href="#"><i class="fa-solid fa-chevron-left"></i> العروض والخصومات</a></li>
-                    <li><a href="#"><i class="fa-solid fa-chevron-left"></i> كيفية الشراء</a></li>
-                    <li><a href="#"><i class="fa-solid fa-chevron-left"></i> سياسة الخصوصية</a></li>
-                </ul>
-            </div>
-
-            <div class="footer-box footer-contact">
-                <h3 class="footer-title">تواصل معنا</h3>
-                <ul>
-                    <li>
-                        <i class="fa-solid fa-location-dot"></i>
-                        <span>القاهره - مصر - قنا - نقاده</span>
-                    </li>
-                    <li>
-                        <i class="fa-solid fa-phone"></i>
-                        <a href="tel:01096429739">01096429739</a>
-                    </li>
-                    <li>
-                        <i class="fa-solid fa-envelope"></i>
-                        <a href="mailto:info@momenhilal.com">info@momenhilal.com</a>
-                    </li>
-                    <li>
-                        <i class="fa-solid fa-clock"></i>
-                        <span>متاحون من 9 صباحًا إلى 9 مساءً</span>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="footer-box footer-payments">
-                <h3 class="footer-title">نقبل وسائل دفع آمنة</h3>
-                <div class="payment-icons">
-                    <i class="fa-brands fa-cc-visa" title="فيزا"></i>
-                    <i class="fa-brands fa-cc-mastercard" title="ماستركارد"></i>
-                    <i class="fa-brands fa-cc-paypal" title="بايبال"></i>
-                    <i class="fa-brands fa-fawkes" title="فوري (مثال)"></i> <i class="fa-solid fa-money-bill-1-wave" title="الدفع عند الاستلام"></i>
-                </div>
-            </div>
-
-        </div>
-
-        <div class="footer-bottom">
-            <div class="container footer-bottom-content">
-                <p>&copy; 2026 جميع الحقوق محفوظة لمتجر <span class="highlight">Momen Hilal</span>.</p>
-                <p class="developer">تم التطوير بواسطة <a href="#" target="_blank">فريقنا</a></p>
+            <p class="footer-desc">متجرك الموثوق للحصول على أفضل المنتجات بأعلى جودة وأنسب الأسعار. نسعى دائمًا لتقديم تجربة تسوق سهلة وسريعة وآمنة.</p>
+            <div class="footer-socials">
+                <a href="#" target="_blank" title="فيس بوك"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" target="_blank" title="انستجرام"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://wa.me/01096429739" target="_blank" title="واتساب"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="#" target="_blank" title="تويتر"><i class="fa-brands fa-twitter"></i></a>
             </div>
         </div>
-    </footer>
 
-    <!-- Scroll to top button -->
-    <button class="scroll-to-top" id="scrollToTop" onclick="scrollToTop()">
-        <i class="fa-solid fa-chevron-up"></i>
-    </button>
+        <div class="footer-box footer-links">
+            <h3 class="footer-title">روابط سريعة</h3>
+            <ul>
+                <li><a href="index.html"><i class="fa-solid fa-chevron-left"></i> الرئيسية</a></li>
+                <li><a href="products.html"><i class="fa-solid fa-chevron-left"></i> المنتجات</a></li>
+                <li><a href="about.html"><i class="fa-solid fa-chevron-left"></i> من نحن</a></li>
+                <li><a href="contact.html"><i class="fa-solid fa-chevron-left"></i> تواصل معنا</a></li>
+            </ul>
+        </div>
 
-    <!-- Scripts -->
-    <script src="index-script.js"></script>
-    <script src="product.js"></script>
-      <script src="products.js"></script>
-        <script src="home-products.js"></script>
-          <script >
-            
-          </script>
+        <div class="footer-box footer-contact">
+            <h3 class="footer-title">تواصل معنا</h3>
+            <ul>
+                <li><i class="fa-solid fa-location-dot"></i><span>القاهرة - مصر - قنا - نقاده</span></li>
+                <li><i class="fa-solid fa-phone"></i><a href="tel:01096429739">01096429739</a></li>
+                <li><i class="fa-solid fa-envelope"></i><a href="mailto:info@momenhilal.com">info@momenhilal.com</a></li>
+                <li><i class="fa-solid fa-clock"></i><span>متاحون من 9 صباحاً إلى 9 مساءً</span></li>
+            </ul>
+        </div>
+
+        <div class="footer-box footer-payments">
+            <h3 class="footer-title">نقبل وسائل دفع آمنة</h3>
+            <div class="payment-icons">
+                <i class="fa-brands fa-cc-visa" title="فيزا"></i>
+                <i class="fa-brands fa-cc-mastercard" title="ماستركارد"></i>
+                <i class="fa-brands fa-cc-paypal" title="بايبال"></i>
+                <i class="fa-solid fa-money-bill-1-wave" title="الدفع عند الاستلام"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <div class="container footer-bottom-content">
+            <p>&copy; 2026 جميع الحقوق محفوظة لمتجر <span class="highlight">Momen Hilal</span></p>
+            <p class="developer">تم التطوير بواسطة <a href="#" target="_blank">Momen Hilal Team</a></p>
+        </div>
+    </div>
+</footer>
+
+<!-- Scroll to Top Button -->
+<button class="scroll-to-top" id="scrollToTop">
+    <i class="fa-solid fa-chevron-up"></i>
+</button>
+
+<!-- ========== SCRIPTS ========== -->
+<script src="CART.JS"></script>
+<script src="main.js"></script>
+<script src="home-products.js"></script>
+<script src="products.js"></script>
+<script src="index-script.js"></script>
+
+<script>
+    // Scroll to Top functionality
+    const scrollBtn = document.getElementById('scrollToTop');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            scrollBtn.classList.add('active');
+        } else {
+            scrollBtn.classList.remove('active');
+        }
+    });
+    
+    scrollBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+    
+    // Search functionality
+    const searchInput = document.getElementById('homeSearch');
+    const searchBtn = document.getElementById('searchBtn');
+    
+    function performSearch() {
+        const term = searchInput.value.trim();
+        if (term) {
+            window.location.href = `products.html?search=${encodeURIComponent(term)}`;
+        }
+    }
+    
+    searchBtn.addEventListener('click', performSearch);
+    searchInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') performSearch();
+    });
+</script>
+
 </body>
 </html>

@@ -131,7 +131,7 @@ body {
 .cart-wrapper,
 .user-wrapper,
 .menu-wrapper {
-    position: relative; */
+    position: relative;
 }
 
 .cart-dropdown,
@@ -230,61 +230,192 @@ body.dark-theme .filter-select {
 
 
 /* --- التجاوبية مع الشاشات المختلفة (Responsive) --- */
+
+/* Tablet Landscape - 1024px and below */
+@media (max-width: 1024px) {
+    .hero-title {
+        font-size: 2.8rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+        max-width: 100%;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: 20px;
+    }
+
+    .page-section {
+        padding: 50px 0;
+    }
+
+    .page-card {
+        padding: 24px;
+        border-radius: 20px;
+    }
+}
+
+/* Tablet Portrait & Mobile Large - 768px and below */
 @media (max-width: 768px) {
     .navbar {
         display: none;
     }
-    .menu-toggle {
-        display: block; /* إظهار أيقونة الهامبرغر */
+
+    .menu-btn {
+        display: flex;
+    }
+
+    .hero-content {
+        padding: 40px 20px;
     }
 
     .hero-title {
         font-size: 2rem;
+        margin-bottom: 10px;
     }
-    .menu-btn{
-        display: flex;
+
+    .hero-subtitle {
+        font-size: 1rem;
+        max-width: 100%;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        gap: 16px;
+    }
+
+    .page-section {
+        padding: 40px 0;
+    }
+
+    .page-card {
+        padding: 20px;
+        border-radius: 16px;
+    }
+
+    .page-card:hover {
+        transform: translateY(-4px);
+    }
+
+    .menu-dropdown {
+        display: none;
+        right: -60px;
+        background-color: black;
+        color: white;
+    }
+
+    .user-dropdown {
+        margin-left: -130px;
+        background-color: black;
+        color: white;
     }
 }
-   
-/* موبيل📱 */
-@media (max-width:1199px) {
 
+/* Mobile Large - 480px to 767px */
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
 
- header{
-  
-  padding: 10px ;
-  /* مهم */
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  background-color: #67b0f9;
- }
- .navbar{
-  display: none;
- }
-  .logo{
-  font-size: 15px;
-  font-weight: bold;
-  font-family: 'Times New Roman', Times, serif;
- }
+    .hero-content {
+        padding: 30px 15px;
+        gap: 15px;
+    }
 
-    .hero-img{
-      width: 300px;
-      height: 300px;
-   }
-   .menu-dropdown{
-     display: block;
-            right:-60px;
-            background-color: black;
-          color: white;
-   }
-   .user-dropdown{
-    margin-left: -130px;
-     background-color: black;
-          color: white;
-   }
- 
+    .hero-title {
+        font-size: 1.5rem;
+        font-weight: 700;
+    }
 
+    .hero-subtitle {
+        font-size: 0.9rem;
+        max-width: 100%;
+        line-height: 1.4;
+    }
+
+    .section-title {
+        font-size: 1.2rem;
+        margin-bottom: 0.4rem;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+        gap: 12px;
+        padding: 0;
+    }
+
+    .page-section {
+        padding: 30px 0;
+    }
+
+    .page-card {
+        padding: 16px;
+        border-radius: 12px;
+    }
+
+    .page-card p,
+    .page-card span {
+        font-size: 0.9rem;
+    }
+
+    .logo {
+        font-size: 1.1rem;
+    }
+
+    .logo i {
+        font-size: 1.3rem;
+    }
+}
+
+/* Mobile Small - up to 379px */
+@media (max-width: 379px) {
+    .hero-content {
+        padding: 25px 12px;
+        gap: 12px;
+    }
+
+    .hero-title {
+        font-size: 1.3rem;
+    }
+
+    .hero-subtitle {
+        font-size: 0.85rem;
+    }
+
+    .section-title {
+        font-size: 1rem;
+        gap: 0.5rem;
+    }
+
+    .product-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .page-section {
+        padding: 20px 0;
+    }
+
+    .page-card {
+        padding: 12px;
+        border-radius: 10px;
+    }
+
+    .page-card p,
+    .page-card span {
+        font-size: 0.85rem;
+    }
 }
 
 /* --- تنسيق قسم Hero (الترحيب والبحث) --- */
