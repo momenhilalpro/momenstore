@@ -5,10 +5,10 @@
 const productsData = [
     {
         id: 1,
-        title: "ساعه سمارة",
-        price: 249.99,
-        originalPrice: 349.99,
-        image: "momen.ggg/Smart.jpg",
+        title: "مؤمن هلال الذكي",
+        price:"لا يقدر بثمن",
+        originalPrice: "لا يقدر بثمن",
+        image: "momen.ggg/momen.jpg",
         category: "electronics",
         rating: 4.5,
         reviews: 245,

@@ -1,5 +1,5 @@
 const productsList = [
-    { name: 'سماعة بلوتوث', price: 250, category: 'الكترونيات', img: 'momen.ggg/blo.jpg', badge: 'خصم', desc: 'صوت محيطي نقي مع تقنية إلغاء الضوضاء النشطة.' },
+    { name:  'مؤمن هلال الذكي', price: 'لا يقدر بثمن', category: 'الكترونيات', img: 'momen.ggg/momen.jpg', badge: 'خصم', desc: '' },
     { name: 'شاحن Type-C', price: 150, category: 'الكترونيات', img: 'momen.ggg/typec.jpg', badge: 'جديد', desc: 'شاحن سريع يدعم الهواتف الحديثة والأجهزة اللوحية.' },
     { name: 'لاب توب', price: 20000, category: 'الكترونيات', img: 'momen.ggg/labtop.jpg', badge: 'عرض', desc: 'لابتوب قوي للأعمال والتصميم مع بطارية تدوم طويلاً.' },
     { name: 'ساعة ذكية', price: 1500, category: 'الكترونيات', img: 'momen.ggg/Smart.jpg', badge: 'مميز', desc: 'تتبع اللياقة البدنية والإشعارات الذكية طوال اليوم.' },
