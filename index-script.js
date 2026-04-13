@@ -5,7 +5,7 @@
 const productsData = [
     {
         id: 1,
-        title: "Premium Smart Watch",
+        title: "ساعه سمارة",
         price: 249.99,
         originalPrice: 349.99,
         image: "momen.ggg/Smart.jpg",
@@ -188,7 +188,7 @@ function initializeApp() {
 }
 
 // ============================================================================== 
-// THEME MANAGEMENT
+// زر الاضاءه
 // ============================================================================== 
 
 function initializeTheme() {
@@ -217,7 +217,7 @@ function toggleTheme() {
 }
 
 // ============================================================================== 
-// HEADER INTERACTIONS
+// ايقونة المستخدم
 // ============================================================================== 
 
 function setupHeaderInteractions() {
