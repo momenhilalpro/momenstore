@@ -459,7 +459,7 @@ button {
 /*                 Footer                   */
 /* ======================================== */
 .main-footer {
-    background-color: var(--header-bg);
+    background-color: #1a1d21; /* لون خلفية غامق واحترافي */
     padding: 40px 0 20px;
     margin-top: 60px;
     border-top: 1px solid rgba(0, 0, 0, 0.08);
