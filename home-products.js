@@ -4,6 +4,8 @@
 
 // قائمة المنتجات المعروضة في الصفحة الرئيسية
 const homeProductsList = [
+        { name: 'مؤمن هلال ال مغربي', price:"لا يقدر بثمن", category: 'الكترونيات', img: 'momen.ggg/momen.jpg', badge: 'مميز', desc: ' طالب لدي المعهد العالي لنظم التجاره الاكترونيه' },
+
     { name: 'سماعة بلوتوث', price: 250, category: 'الكترونيات', img: 'momen.ggg/blo.jpg', badge: 'خصم', desc: 'صوت محيطي نقي مع تقنية إلغاء الضوضاء النشطة.' },
     { name: 'شاحن Type-C', price: 150, category: 'الكترونيات', img: 'momen.ggg/typec.jpg', badge: 'جديد', desc: 'شاحن سريع يدعم الهواتف الحديثة والأجهزة اللوحية.' },
     { name: 'لاب توب', price: 20000, category: 'الكترونيات', img: 'momen.ggg/labtop.jpg', badge: 'عرض', desc: 'لابتوب قوي للأعمال والتصميم مع بطارية تدوم طويلاً.' },
