@@ -600,6 +600,11 @@ button {
         max-height: calc(100vh - 70px);
         overflow-y: auto;
     }
+    .momen-main{
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+}
 }
 
 /* شاشات صغيرة (موبايل) */
@@ -654,6 +659,11 @@ button {
     .menu-dropdown.dropdown-open {
         max-height: calc(100vh - 60px);
     }
+    .momen-main{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+}
 }
 
 /* شاشات صغيرة جداً */
