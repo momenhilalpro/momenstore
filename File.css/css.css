@@ -660,8 +660,8 @@ button {
         max-height: calc(100vh - 60px);
     }
     .momen-main{
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
     border-radius: 50%;
 }
 }
@@ -689,6 +689,11 @@ button {
     .menu-dropdown.dropdown-open {
         max-height: calc(100vh - 50px);
     }
+.momen-main{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
 }
 
 /* ======================================== */
