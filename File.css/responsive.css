@@ -26,7 +26,7 @@
     }
     
     .product-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
         gap: 15px;
     }
     
@@ -88,7 +88,7 @@
     }
     
     .product-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
         gap: 20px;
     }
     
@@ -125,7 +125,7 @@
     }
     
     .product-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
         gap: 15px;
     }
     
@@ -175,7 +175,7 @@
     
     .product .product-buttons button,
     .product .product-buttons a {
-        width: 100%;
+        width: 90%;
         text-align: center;
     }
     
