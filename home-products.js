@@ -4,6 +4,7 @@
 
 // قائمة المنتجات المعروضة في الصفحة الرئيسية
 const homeProductsList = [
+    { name: ' Laptop-Dell', price: 22000, category: 'الكترونيات', img: 'momen.ggg/Dell-5580-1.png', badge: 'عرض', desc: ' Model: Laptop Dell 5580., Brand: Dell., CPU: Core i7 7600u., Viga: Nvidia 930mx., Hd: 256 SSD., Ram: 16 GB., Monitor: 15.6.' },
 
     { name: 'سماعة بلوتوث', price: 250, category: 'الكترونيات', img: 'momen.ggg/blo.jpg', badge: 'خصم', desc: 'صوت محيطي نقي مع تقنية إلغاء الضوضاء النشطة.' },
     { name: 'شاحن Type-C', price: 150, category: 'الكترونيات', img: 'momen.ggg/typec.jpg', badge: 'جديد', desc: 'شاحن سريع يدعم الهواتف الحديثة والأجهزة اللوحية.' },
