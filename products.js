@@ -8,7 +8,9 @@ const productsList = [
     { name: 'غسالة أطباق', price: 15000, category: 'منزل', img: 'momen.ggg/IMG_٢٠٢٦٠٣٢٥_٢٣٣٠٠٤.jpg', badge: 'متوفر', desc: 'غسالة أطباق موفرة للطاقة مع وظائف ذكية.' },
     { name: 'بدلة كلاسيك', price: 2000, category: 'أزياء', img: 'momen.ggg/Screenshot_2026-03-25-23-31-28-52.jpg', badge: 'جديد', desc: 'بدلة أنيقة للمناسبات الرسمية والمظهر الاحترافي.' },
     { name: 'ساعه سمارة', price: 500, category: 'أزياء', img: 'momen.ggg/smart1.jpg', badge: 'عرض', desc: 'ساعة تصميمها عصري وتدعم الوظائف الذكية الأساسية.' },
-    { name: 'ساعه سمارة', price: 500, category: 'أزياء', img: 'momen.ggg/smart1.jpg', badge: 'عرض', desc: 'ساعة تصميمها عصري وتدعم الوظائف الذكية الأساسية.' }
+    { name: ' Laptop-Dell', price: 22000, category: 'الكترونيات', img: 'momen.ggg/Dell-5580-1.png', badge: 'عرض', desc: ' تسوق واشتري الان من موقعنا لاب توب ديل 5510-G15 يعمل علي معالج من الجيل العاشر Intel® Core™ i7 رامات 16جيجابايت من النوع DDR4 يحتوي علي هارد SSD' },
+
+    { name: ' Laptop-Dell', price: 22000, category: 'الكترونيات', img: 'momen.ggg/Dell-5580-1.png', badge: 'عرض', desc: ' Model: Laptop Dell 5580., Brand: Dell., CPU: Core i7 7600u., Viga: Nvidia 930mx., Hd: 256 SSD., Ram: 16 GB., Monitor: 15.6.' }
 ];
 
 const productGrid = document.getElementById('productGrid');
